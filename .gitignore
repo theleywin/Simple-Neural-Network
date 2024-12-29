@@ -1,0 +1,5 @@
+# Ignorar la carpeta específica
+dataset/
+
+# Ignorar .DS_Store
+.DS_Store
