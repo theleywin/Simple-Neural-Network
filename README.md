@@ -13,6 +13,7 @@ This project implements a simple neural network from scratch using Python and Nu
     - [Preprocessing](#preprocessing)
     - [Functions](#functions)
   - [Usage](#usage)
+  - [Dependencies](#dependencies)
 
 ## Project Description
 This project demonstrates how to build, train, and evaluate a neural network to recognize handwritten digits using the MNIST dataset. The network is implemented without external machine learning libraries to highlight fundamental concepts.
@@ -52,3 +53,12 @@ The neural network has the following structure:
    ```bash
    git clone https://github.com/theleywin/Simple-Neural-Network.git
    cd Simple-Neural-Network
+2. Install dependencies
+3. Place the dataset file `train-1.csv` in the dataset/ directory.
+4. Run the training script.
+
+## Dependencies
+
+* Python 3.7+
+* NumPy
+* Pandas
