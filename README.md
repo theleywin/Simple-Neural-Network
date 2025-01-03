@@ -139,6 +139,7 @@ $$
 $$\mathbf{z}^{(1)} = (z_1^{(1)}, \dots, z_{n_2}^{(1)})  = (W^{(0)})^{\top}\mathbf{x} + \mathbf{b} =
 \big(\mathbf{w}^{\top}_1 \mathbf{x} +b_1 ,\cdots,  \mathbf{w}^{\top}_{n_2} \mathbf{x} + b_{n_2}\big),$$ 
 for each node $i$ in the hidden layer (Layer $2$), $i=1,\dots, n_2$, then
+
 $$\delta^{(1)}_i : = \frac{\partial J}{\partial z^{(1)}_i}  =
 \frac{\partial J}{\partial a_i} 
 \frac{\partial a_i}{\partial z^{(1)}_i}=
