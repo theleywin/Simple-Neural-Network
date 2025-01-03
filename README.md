@@ -93,7 +93,7 @@ We hope that this estimate is as close as possible to the true probability: $1_{
 
 Lastly, our prediction $\hat{y}$ for sample $\mathbf{x}$ can be made by choosing the class with the highest probability:
 ```math
-\hat{y} = \operatorname{argmax}_{k=1,\dots,K}  P\big(y = k \;| \;\mathbf{a}; W^{(1)}\big). \tag{$\ast$}
+\hat{y} = {argmax}_{k=1,\dots,K}  P\big(y = k \;| \;\mathbf{a}; W^{(1)}\big). \tag{$\ast$}
 ```
 
 Denote the label of the $i$-th input as $y^{(i)}$, and then the sample-wise loss function is the cross entropy measuring the difference of the distribution of this model function above with the true one $1_{\{y^{(i)}=k\}}$: denote $W = (W^{(0)}, W^{(1)})$, $b = (\mathbf{b})$, let $\mathbf{a}^{(i)}$ be the activation for the $i$-th sample in the hidden layer (Layer 2),
@@ -170,7 +170,15 @@ for each node $i$ in the hidden layer (Layer $2$), $i=1,\dots, n_2$, then
 \frac{\partial {z}^{(2)}_k}{\partial a_i}  \right) f'(z^{(1)}_i) = \left( \sum_{k=1}^{K} w_{ki} \delta^{(2)}_k \right) 1_{\{z^{(1)}_i\; > 0\}}
 ```
 
-where $1_{\{z^{(1)}_i\; > 0\}}$ is ReLU activation $f$'s (weak) derivative, and the partial derivative of the $k$-th component (before activated by the softmax) in the output layer $z^{(2)}_{k}$ with respect to the $i$-th activation $a_i$ from the hidden layer is the weight $w^{(1)}_{ki}$. Thus
+where 
+```math
+1_{\{z^{(1)}_i\; > 0\}}
+```
+ is ReLU activation $f$'s (weak) derivative, and the partial derivative of the $k$-th component (before activated by the softmax) in the output layer 
+ ```math
+ z^{(2)}_{k}
+ ```
+  with respect to the i-th activation $a_i$ from the hidden layer is the weight $w^{(1)}_{ki}$. Thus
 >
 ```math
 \frac{\partial J}{\partial w_{ji}}  = x_j \delta_i^{(1)} ,\;
