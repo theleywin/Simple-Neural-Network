@@ -140,7 +140,8 @@ $$\mathbf{z}^{(1)} = (z_1^{(1)}, \dots, z_{n_2}^{(1)})  = (W^{(0)})^{\top}\mathb
 \big(\mathbf{w}^{\top}_1 \mathbf{x} +b_1 ,\cdots,  \mathbf{w}^{\top}_{n_2} \mathbf{x} + b_{n_2}\big),$$ 
 for each node $i$ in the hidden layer (Layer $2$), $i=1,\dots, n_2$, then
 
-$$\delta^{(1)}_i : = \frac{\partial J}{\partial z^{(1)}_i}  =
+```math
+\delta^{(1)}_i : = \frac{\partial J}{\partial z^{(1)}_i}  =
 \frac{\partial J}{\partial a_i} 
 \frac{\partial a_i}{\partial z^{(1)}_i}=
 \frac{\partial J}{\partial \mathbf{z}^{(2)}}
@@ -149,7 +150,8 @@ $$\delta^{(1)}_i : = \frac{\partial J}{\partial z^{(1)}_i}  =
 \\
 =\left( \sum_{k=1}^{K} \frac{\partial J}{\partial {z}^{(2)}_k}
 \frac{\partial {z}^{(2)}_k}{\partial a_i}  \right) f'(z^{(1)}_i) = \left( \sum_{k=1}^{K} w_{ki} \delta^{(2)}_k \right) 1_{\{z^{(1)}_i\; > 0\}},
-$$
+```
+
 where $1_{\{z^{(1)}_i\; > 0\}}$ is ReLU activation $f$'s (weak) derivative, and the partial derivative of the $k$-th component (before activated by the softmax) in the output layer ${z}^{(2)}_k$ with respect to the $i$-th activation $a_i$ from the hidden layer is the weight $w^{(1)}_{ki}$. Thus
 >
 $$
